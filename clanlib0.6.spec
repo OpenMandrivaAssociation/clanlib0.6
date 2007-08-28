@@ -1,6 +1,6 @@
 %define	name	clanlib0.6
 %define	version	0.6.5
-%define release	27
+%define release	28
 %define	lib_name_orig libclanlib
 %define	lib_major 2
 %define	lib_name %mklibname clanlib %{lib_major}
@@ -24,6 +24,7 @@ Patch8:		ClanLib-0.6.5-gcc34.patch.bz2
 Patch9:		ClanLib-0.6.5-freetype.patch.bz2
 Patch10:	ClanLib-0.6.5-directfb-fixes.patch.bz2
 Patch11:	ClanLib-0.6.5-extraqualif.patch.bz2
+Patch12:	ClanLib-0.6.5-typename.patch
 
 URL:		http://www.clanlib.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -210,6 +211,8 @@ work for game developers. This package contains the documentation.
 %patch9 -p1 -b .freetype
 %patch10 -p1 -b .directfb-fixes
 %patch11 -p1 -b .extraqualif
+%patch12 -p1 -b .typename
+
 autoconf
 
 %build
