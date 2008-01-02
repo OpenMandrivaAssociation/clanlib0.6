@@ -27,6 +27,7 @@ Patch11:	ClanLib-0.6.5-extraqualif.patch.bz2
 Patch12:	ClanLib-0.6.5-typename.patch
 
 URL:		http://www.clanlib.org/
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libhermes-devel >= 1.3.0 libmikmod-devel libpng-devel Mesa-common-devel autoconf2.5
 BuildRequires:	libtiff-devel X11-static-devel bzip2-devel libvorbis-devel DirectFB-devel
 Obsoletes:	ClanLib
