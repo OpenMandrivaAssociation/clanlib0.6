@@ -1,6 +1,6 @@
 %define	name	clanlib0.6
 %define	version	0.6.5
-%define release	28
+%define release	29
 %define	lib_name_orig libclanlib
 %define	lib_major 2
 %define	lib_name %mklibname clanlib %{lib_major}
@@ -12,26 +12,26 @@ Release:	%mkrel %{release}
 License:	LGPL
 Group:		System/Libraries
 Source0:	http://www.clanlib.org/download/files/ClanLib-%{version}-1.tar.bz2
-Patch0:		ClanLib-0.6.5-display-compilation.patch.bz2
-Patch1:		ClanLib-0.6.5-doc-fix.patch.bz2
-Patch2:		ClanLib-0.6.5-glXGetProcAddressARB.patch.bz2
-Patch3:		ClanLib-0.6.5-fix-png-detection.patch.bz2
-Patch4:		ClanLib-0.6.5-gcc33.patch.bz2
-Patch5:		ClanLib-0.6.5-64bit-fixes.patch.bz2
-Patch6:		ClanLib-0.6.5-bounds.patch.bz2
-Patch7:		ClanLib-0.6.5-directfb-ttf-fix.patch.bz2
-Patch8:		ClanLib-0.6.5-gcc34.patch.bz2 
-Patch9:		ClanLib-0.6.5-freetype.patch.bz2
-Patch10:	ClanLib-0.6.5-directfb-fixes.patch.bz2
-Patch11:	ClanLib-0.6.5-extraqualif.patch.bz2
+Patch0:		ClanLib-0.6.5-display-compilation.patch
+Patch1:		ClanLib-0.6.5-doc-fix.patch
+Patch2:		ClanLib-0.6.5-glXGetProcAddressARB.patch
+Patch3:		ClanLib-0.6.5-fix-png-detection.patch
+Patch4:		ClanLib-0.6.5-gcc33.patch
+Patch5:		ClanLib-0.6.5-64bit-fixes.patch
+Patch6:		ClanLib-0.6.5-bounds.patch
+Patch7:		ClanLib-0.6.5-directfb-ttf-fix.patch
+Patch8:		ClanLib-0.6.5-gcc34.patch
+Patch9:		ClanLib-0.6.5-freetype.patch
+Patch10:	ClanLib-0.6.5-directfb-fixes.patch
+Patch11:	ClanLib-0.6.5-extraqualif.patch
 Patch12:	ClanLib-0.6.5-typename.patch
-
+Patch13:	ClanLib-0.6.5-gcc4.3.patch
 URL:		http://www.clanlib.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libhermes-devel >= 1.3.0 libmikmod-devel libpng-devel Mesa-common-devel autoconf2.5
 BuildRequires:	libtiff-devel X11-static-devel bzip2-devel libvorbis-devel DirectFB-devel
 Obsoletes:	ClanLib
 Provides:	ClanLib = %{version}-%{release}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The ClanLib Game SDK is a crossplatform game library designed to ease the work
@@ -212,6 +212,7 @@ work for game developers. This package contains the documentation.
 %patch10 -p1 -b .directfb-fixes
 %patch11 -p1 -b .extraqualif
 %patch12 -p1 -b .typename
+%patch13 -p1 -z .gcc43
 
 autoconf
 
