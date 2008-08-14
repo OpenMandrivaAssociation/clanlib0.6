@@ -1,6 +1,6 @@
 %define	name	clanlib0.6
 %define	version	0.6.5
-%define release	30
+%define release	31
 %define	lib_name_orig libclanlib
 %define	lib_major 2
 %define	lib_name %mklibname clanlib %{lib_major}
@@ -26,6 +26,7 @@ Patch10:	ClanLib-0.6.5-directfb-fixes.patch
 Patch11:	ClanLib-0.6.5-extraqualif.patch
 Patch12:	ClanLib-0.6.5-typename.patch
 Patch13:	ClanLib-0.6.5-gcc4.3.patch
+Patch14:	ClanLib-0.6.5-new-mikmod.patch
 URL:		http://www.clanlib.org/
 BuildRequires:	libhermes-devel >= 1.3.0 libmikmod-devel libpng-devel Mesa-common-devel autoconf2.5
 BuildRequires:	libtiff-devel X11-static-devel bzip2-devel libvorbis-devel DirectFB-devel
@@ -213,6 +214,7 @@ work for game developers. This package contains the documentation.
 %patch11 -p1 -b .extraqualif
 %patch12 -p1 -b .typename
 %patch13 -p1 -z .gcc43
+%patch14 -p1
 
 autoconf
 
