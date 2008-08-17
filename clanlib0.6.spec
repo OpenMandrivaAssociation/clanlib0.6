@@ -1,6 +1,6 @@
 %define	name	clanlib0.6
 %define	version	0.6.5
-%define release	32
+%define release	33
 %define	lib_name_orig libclanlib
 %define	lib_major 2
 %define	lib_name %mklibname clanlib %{lib_major}
@@ -9,7 +9,7 @@ Name:		%{name}
 Summary:	The ClanLib Game SDK
 Version:	%{version}
 Release:	%mkrel %{release}
-License:	LGPL
+License:	LGPLv2+
 Group:		System/Libraries
 Source0:	http://www.clanlib.org/download/files/ClanLib-%{version}-1.tar.bz2
 Patch0:		ClanLib-0.6.5-display-compilation.patch
@@ -29,7 +29,7 @@ Patch13:	ClanLib-0.6.5-gcc4.3.patch
 Patch14:	ClanLib-0.6.5-new-mikmod.patch
 URL:		http://www.clanlib.org/
 BuildRequires:	libhermes-devel >= 1.3.0 libmikmod-devel libpng-devel Mesa-common-devel autoconf2.5
-BuildRequires:	libtiff-devel X11-static-devel bzip2-devel libvorbis-devel DirectFB-devel
+BuildRequires:	libtiff-devel X11-static-devel bzip2-devel libvorbis-devel
 Obsoletes:	ClanLib
 Provides:	ClanLib = %{version}-%{release}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -219,7 +219,7 @@ work for game developers. This package contains the documentation.
 autoconf
 
 %build
-export COMMON_CONFIGURE_FLAGS="--enable-dyn --enable-joystick --disable-lua --disable-debug --enable-ttf"
+export COMMON_CONFIGURE_FLAGS="--enable-dyn --enable-joystick --disable-lua --disable-debug --enable-ttf --disable-directfb"
 # (sb) doesn't build on PPC with this
 %ifarch %ix86
 # (gc) workaround g++ exception bug when -fomit-frame-pointer is set
