@@ -1,6 +1,6 @@
 %define	name	clanlib0.6
 %define	version	0.6.5
-%define release	35
+%define release	36
 %define	lib_name_orig libclanlib
 %define	lib_major 2
 %define	lib_name %mklibname clanlib %{lib_major}
