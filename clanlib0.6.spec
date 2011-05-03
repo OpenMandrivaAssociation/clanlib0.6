@@ -27,6 +27,7 @@ Patch11:	ClanLib-0.6.5-extraqualif.patch
 Patch12:	ClanLib-0.6.5-typename.patch
 Patch13:	ClanLib-0.6.5-gcc4.3.patch
 Patch14:	ClanLib-0.6.5-new-mikmod.patch
+Patch15:	ClanLib-0.6.5-gcc4.6.patch
 URL:		http://www.clanlib.org/
 BuildRequires:	libhermes-devel >= 1.3.0 libmikmod-devel libpng-devel Mesa-common-devel autoconf2.5
 BuildRequires:	libtiff-devel X11-static-devel bzip2-devel libvorbis-devel
@@ -215,6 +216,7 @@ work for game developers. This package contains the documentation.
 %patch12 -p1 -b .typename
 %patch13 -p1 -z .gcc43
 %patch14 -p1
+%patch15 -p1
 
 autoconf
 
