@@ -28,6 +28,10 @@ Patch12:	ClanLib-0.6.5-typename.patch
 Patch13:	ClanLib-0.6.5-gcc4.3.patch
 Patch14:	ClanLib-0.6.5-new-mikmod.patch
 Patch15:	ClanLib-0.6.5-gcc4.6.patch
+Patch16:	ClanLib-0.6.5-gzopen-flags.patch
+Patch17:	ClanLib-0.6.5-gcc45.patch
+Patch18:	ClanLib-0.6.5-libpng1.5.patch
+Patch19:	ClanLib-0.6.5-link.patch
 URL:		http://www.clanlib.org/
 BuildRequires:	libhermes-devel >= 1.3.0 libmikmod-devel libpng-devel Mesa-common-devel autoconf2.5
 BuildRequires:	libtiff-devel X11-static-devel bzip2-devel libvorbis-devel
@@ -217,6 +221,10 @@ work for game developers. This package contains the documentation.
 %patch13 -p1 -z .gcc43
 %patch14 -p1
 %patch15 -p1
+%patch16 -p1
+%patch17 -p0
+%patch18 -p0
+%patch19 -p0
 
 autoconf
 
