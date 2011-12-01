@@ -254,12 +254,12 @@ rm -f Libs/*.a
 make docs
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%makeinstall BIN_PREFIX=$RPM_BUILD_ROOT%{_bindir} LIB_PREFIX=$RPM_BUILD_ROOT%{_libdir} INC_PREFIX=$RPM_BUILD_ROOT%{_includedir} TARGET_PREFIX=$RPM_BUILD_ROOT%{_libdir}/ClanLib
-make MAN_PREFIX=$RPM_BUILD_ROOT%{_mandir} HTML_PREFIX=$RPM_BUILD_ROOT%{_datadir}/doc/%{name}-docs-%{version}/Docs docs_install
+rm -rf %{buildroot}
+%makeinstall BIN_PREFIX=%{buildroot}%{_bindir} LIB_PREFIX=%{buildroot}%{_libdir} INC_PREFIX=%{buildroot}%{_includedir} TARGET_PREFIX=%{buildroot}%{_libdir}/ClanLib
+make MAN_PREFIX=%{buildroot}%{_mandir} HTML_PREFIX=%{buildroot}%{_datadir}/doc/%{name}-docs-%{version}/Docs docs_install
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files -n %{lib_name}
 %defattr(-, root, root)
