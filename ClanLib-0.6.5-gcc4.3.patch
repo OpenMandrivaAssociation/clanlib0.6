@@ -1,0 +1,143 @@
+--- ClanLib-0.6.5/Sources/Core/precomp.h.gcc43	2001-12-14 03:39:57.000000000 +0100
++++ ClanLib-0.6.5/Sources/Core/precomp.h	2009-04-09 10:58:48.000000000 +0200
+@@ -33,6 +33,8 @@
+ #include "API/signals.h"
+ #include "API/Core/System/error.h"
+ 
++#include <string.h>
++
+ #ifdef __BORLANDC__
+ #define BAD_MATH
+ #endif
+--- ClanLib-0.6.5/Sources/Display/Display/X11/display_xwindow.h.gcc43	2002-08-14 15:48:40.000000000 +0200
++++ ClanLib-0.6.5/Sources/Display/Display/X11/display_xwindow.h	2009-04-09 10:58:48.000000000 +0200
+@@ -25,6 +25,7 @@
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
+ #include <X11/cursorfont.h>
++#include <string.h>
+ 
+ #include "target_ximage_std.h"
+ #include "target_ximage_shm.h"
+--- ClanLib-0.6.5/Sources/GUI/precomp.h.gcc43	2002-03-01 23:19:09.000000000 +0100
++++ ClanLib-0.6.5/Sources/GUI/precomp.h	2009-04-09 10:58:48.000000000 +0200
+@@ -4,6 +4,8 @@
+ #ifdef WIN32
+ #pragma warning (disable:4786)
+ 
++#include <string.h>
++
+ // Framework
+ #include "API/GUI/component.h"
+ #include "API/GUI/component_manager.h"
+--- ClanLib-0.6.5/Sources/Network/Generic/ip_address.cpp.gcc43	2002-07-02 22:59:33.000000000 +0200
++++ ClanLib-0.6.5/Sources/Network/Generic/ip_address.cpp	2009-04-09 10:58:48.000000000 +0200
+@@ -11,6 +11,7 @@
+ 
+ 	------------------------------------------------------------------------
+ */
++#include <string.h>
+ #include "API/Network/ip_address.h"
+ #include "API/Core/System/error.h"
+ 
+--- ClanLib-0.6.5/Sources/Network/Generic/netvariables_generic.h.gcc43	2001-05-18 13:58:37.000000000 +0200
++++ ClanLib-0.6.5/Sources/Network/Generic/netvariables_generic.h	2009-04-09 10:58:48.000000000 +0200
+@@ -16,6 +16,7 @@
+ #define header_netvariables_generic
+ 
+ #include <list>
++#include <cstring>
+ #include "API/Core/IOData/inputsource.h"
+ #include "API/Core/IOData/outputsource.h"
+ 
+--- ClanLib-0.6.5/Sources/Network/Generic/socket.cpp.gcc43	2001-11-22 01:43:11.000000000 +0100
++++ ClanLib-0.6.5/Sources/Network/Generic/socket.cpp	2009-04-09 10:58:48.000000000 +0200
+@@ -25,6 +25,7 @@
+ #define INVALID_SOCKET -1
+ #endif
+ 
++#include <string.h>
+ #include "socket_generic.h"
+ #include "API/Core/System/error.h"
+ 
+--- ClanLib-0.6.5/Sources/Network/Generic/socket_generic.cpp.gcc43	2001-11-22 01:43:11.000000000 +0100
++++ ClanLib-0.6.5/Sources/Network/Generic/socket_generic.cpp	2009-04-09 10:58:48.000000000 +0200
+@@ -16,6 +16,7 @@
+ #pragma warning (disable:4786)
+ #endif
+ 
++#include <string.h>
+ #include "socket_generic.h"
+ 
+ /////////////////////////////////////////////////////////////////////////////
+--- ClanLib-0.6.5/Sources/Sound/Sound/ClanSound/mixer.cpp.gcc43	2001-11-22 00:18:51.000000000 +0100
++++ ClanLib-0.6.5/Sources/Sound/Sound/ClanSound/mixer.cpp	2009-04-09 10:58:48.000000000 +0200
+@@ -14,6 +14,8 @@
+ #include <Sound/Sound/ClanSound/mixer.h>
+ #include <Sound/Sound/ClanSound/cardplayback_clan.h>
+ 
++#include <string.h>
++
+ #ifdef USE_I386_ASSEMBLER
+ #if defined(__BORLANDC__) && !defined(USE_TASM)
+   #undef USE_I386_ASSEMBLER
+--- ClanLib-0.6.5/Sources/Sound/Sound/ClanSound/playback_static.cpp.gcc43	2001-10-01 22:42:17.000000000 +0200
++++ ClanLib-0.6.5/Sources/Sound/Sound/ClanSound/playback_static.cpp	2009-04-09 10:58:48.000000000 +0200
+@@ -18,6 +18,7 @@
+ 
+ #ifdef USE_CLANSOUND
+ 
++#include <string.h>
+ #include <Sound/Sound/ClanSound/soundbuffer_static_clan.h>
+ #include <Sound/Sound/ClanSound/cardplayback_clan.h>
+ #include <Sound/Sound/ClanSound/playback_static.h>
+--- ClanLib-0.6.5/Sources/Sound/Sound/ClanSound/playback_stream.cpp.gcc43	2002-02-01 23:04:54.000000000 +0100
++++ ClanLib-0.6.5/Sources/Sound/Sound/ClanSound/playback_stream.cpp	2009-04-09 10:58:48.000000000 +0200
+@@ -22,6 +22,7 @@
+ 
+ #ifdef USE_CLANSOUND
+ 
++#include <string.h>
+ #include <API/Core/System/mutex.h>
+ #include <API/Sound/stream_soundprovider.h>
+ #include "API/Core/System/cl_assert.h"
+--- ClanLib-0.6.5/Sources/Sound/Sound/ClanSound/soundbuffer_static_clan.cpp.gcc43	2001-09-24 22:21:38.000000000 +0200
++++ ClanLib-0.6.5/Sources/Sound/Sound/ClanSound/soundbuffer_static_clan.cpp	2009-04-09 10:58:48.000000000 +0200
+@@ -22,6 +22,7 @@
+ 
+ #ifdef USE_CLANSOUND
+ 
++#include <string.h>
+ #include <API/Sound/static_soundprovider.h>
+ #include "API/Core/System/cl_assert.h"
+ #include <Sound/Sound/Generic/cardsoundbuffer_playback.h>
+--- ClanLib-0.6.5/Sources/Sound/SoundFilters/inverse_echofilter_generic.cpp.gcc43	2002-05-20 14:57:06.000000000 +0200
++++ ClanLib-0.6.5/Sources/Sound/SoundFilters/inverse_echofilter_generic.cpp	2009-04-09 10:58:48.000000000 +0200
+@@ -21,6 +21,7 @@
+ #ifdef BORLAND
+ #include <memory.h>
+ #endif
++#include <string.h>
+ 
+ CL_InverseEchoFilter::CL_InverseEchoFilter(int buffer_size)
+ {
+--- ClanLib-0.6.5/Sources/Sound/SoundProviders/static_provider_wave.cpp.gcc43	2002-08-14 15:58:29.000000000 +0200
++++ ClanLib-0.6.5/Sources/Sound/SoundProviders/static_provider_wave.cpp	2009-04-09 10:58:48.000000000 +0200
+@@ -20,6 +20,7 @@
+ #pragma warning (disable:4786)
+ #endif
+ 
++#include <string.h>
+ #include "API/Core/IOData/cl_endian.h"
+ #include "API/Core/IOData/inputsource_provider.h"
+ #include "API/Core/IOData/inputsource.h"
+--- ClanLib-0.6.5/Sources/Sound/SoundProviders/stream_provider_wave.cpp.gcc43	2002-08-14 16:00:13.000000000 +0200
++++ ClanLib-0.6.5/Sources/Sound/SoundProviders/stream_provider_wave.cpp	2009-04-09 10:58:48.000000000 +0200
+@@ -20,6 +20,7 @@
+ #pragma warning (disable:4786)
+ #endif
+ 
++#include <string.h>
+ #include "API/Core/System/cl_assert.h"
+ #include "API/Core/System/error.h"
+ #include "API/Core/IOData/inputsource.h"
