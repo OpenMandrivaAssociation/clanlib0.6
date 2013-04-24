@@ -30,7 +30,7 @@ Patch16:	ClanLib-0.6.5-gzopen-flags.patch
 Patch17:	ClanLib-0.6.5-gcc45.patch
 Patch18:	ClanLib-0.6.5-libpng1.5.patch
 Patch19:	ClanLib-0.6.5-link.patch
-BuildRequires:	libhermes-devel >= 1.3.0
+BuildRequires:	hermes-devel >= 1.3.0
 BuildRequires:	libmikmod-devel
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	mesa-common-devel
