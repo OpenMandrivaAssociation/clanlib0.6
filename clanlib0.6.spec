@@ -5,7 +5,7 @@
 Name:		clanlib0.6
 Summary:	The ClanLib Game SDK
 Version:	0.6.5
-Release:	40
+Release:	41
 License:	LGPLv2+
 Group:		System/Libraries
 URL:		http://www.clanlib.org/
