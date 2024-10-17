@@ -8,7 +8,7 @@ Version:	0.6.5
 Release:	41
 License:	LGPLv2+
 Group:		System/Libraries
-URL:		http://www.clanlib.org/
+URL:		https://www.clanlib.org/
 Source0:	http://www.clanlib.org/download/files/ClanLib-%{version}-1.tar.bz2
 Patch0:		ClanLib-0.6.5-display-compilation.patch
 Patch1:		ClanLib-0.6.5-doc-fix.patch
